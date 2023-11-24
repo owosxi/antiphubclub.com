@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'SpecialFont', sans-serif; /* Replace 'SpecialFont' with the actual font name */
+        }
+
+        #quote-container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="quote-container">
+        <p id="quote-text">This is a random quote.</p>
+    </div>
+
+    <script>
+        // Your JavaScript code for generating random quotes goes here
+        const quotes = [
+            "Phones are bad.",
+            "Try to avoid spending too much time on the internet.",
+            "Be sure to eat at least 1 meal a day.",
+            // Add more quotes as needed
+        ];
+
+        const quoteContainer = document.getElementById('quote-text');
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+
+        quoteContainer.innerText = quotes[randomIndex];
+    </script>
+</body>
+</html>
